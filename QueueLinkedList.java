@@ -5,6 +5,7 @@ import java.util.*;
 
             // Enqueue operation
             queue.add(10);
+            queue.offer(15); // Another way to add elements to the queue
             queue.add(20);
             queue.add(30);
             System.out.println("Queue after enqueuing: " + queue);
