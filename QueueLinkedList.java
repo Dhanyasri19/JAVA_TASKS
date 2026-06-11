@@ -1,28 +1,25 @@
-import java.util.*;
-    public class QueueLinkedList {
-        public static void main(String[] args) {
-            Queue<Integer> queue = new LinkedList<>();
+import java.util.LinkedList;
 
-            // Enqueue operation
-            queue.add(10);
-            queue.offer(15); // Another way to add elements to the queue
-            queue.add(20);
-            queue.add(30);
-            System.out.println("Queue after enqueuing: " + queue);
+public class QueueLinkedList {
+    public static void main(String[] args) {
 
-            // Dequeue operation
-            int removedElement = queue.poll();
-            System.out.println("Dequeued element: " + removedElement);
-            System.out.println("Queue after dequeuing: " + queue);
+        java.util.Queue<Integer> queue = new LinkedList<>();
 
-            // Peek operation
-            int frontElement = queue.peek();
-            System.out.println("Front element: " + frontElement);
+        queue.add(10);
+        queue.offer(15);
+        queue.add(20);
+        queue.add(30);
 
-            // Check if queue is empty
-            boolean isEmpty = queue.isEmpty();
-            System.out.println("Is the queue empty? " + isEmpty);
-        }
+        System.out.println("Queue after enqueuing: " + queue);
 
+        Integer removedElement = queue.poll();
+        System.out.println("Dequeued element: " + removedElement);
 
+        System.out.println("Queue after dequeuing: " + queue);
+
+        Integer frontElement = queue.peek();
+        System.out.println("Front element: " + frontElement);
+
+        System.out.println("Is the queue empty? " + queue.isEmpty());
+    }
 }
