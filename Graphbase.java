@@ -21,6 +21,10 @@ class GraphMatrix {
             System.out.println();
         }
     }
+    void removeEdge(int u, int v) {
+        adjMatrix[u][v] = 0;
+        adjMatrix[v][u] = 0; // For undirected graph
+    }
 }
 public class Graphbase {
     public static void main(String[] args) {
@@ -29,6 +33,9 @@ public class Graphbase {
         g.addEdge(0, 2);
         g.addEdge(1, 2);
         g.addEdge(2, 3);
+        g.display();
+        g.removeEdge(0, 1);
+        System.out.println("After removing edge (0, 1):");
         g.display();
     }
     
